@@ -76,8 +76,8 @@ def index():
                     x = table.insert_one(mydict) #insertig the dictionary containing the rview comments to the collection
                     reviews.append(mydict) #  appending the comments to the review list
                 return render_template('results.html', reviews=reviews) # showing the review to the user
-        except:
-            return 'something is wrong'
+        except Exception as e:
+            return f'something is wrong {e}'
             #return render_template('results.html')
 
 if __name__=="__main__":
