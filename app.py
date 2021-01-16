@@ -20,7 +20,7 @@ def index():
         searchString = request.form['content'].replace(" ","") # obtaining the search string entered in the form
         try:
             # dbConn = pymongo.MongoClient("mongodb://localhost:27017/")  # opening a connection to Mongo
-            default_connection_url="mongodb+srv://Waqas-Bilal:25mar1139241@cluster0.zv4yj.mongodb.net/test?retryWrites=true&w=majority"
+            default_connection_url=""
             dbConn=pymongo.MongoClient(default_connection_url)
             # db=dbConn["INEURON"]
             db = dbConn['crawlerDB'] # connecting to the database called crawlerDB
